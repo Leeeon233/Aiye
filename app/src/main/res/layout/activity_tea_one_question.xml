@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/background">
+        <ImageButton
+            android:id="@+id/btn_ques_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back_black"
+            android:layout_gravity="left|bottom"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"/>
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/quesNo"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="第1题"
+                android:textColor="@color/darkGreen"
+                android:textSize="20sp">
+
+            </TextView>
+            <TextView
+
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="/"
+                android:textColor="@color/lightBlack"
+                android:textSize="20sp">
+
+            </TextView>
+            <TextView
+                android:id="@+id/quesNoTol"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="共30题"
+                android:textColor="@color/lightBlack"
+                android:textSize="20sp">
+
+            </TextView>
+        </LinearLayout>
+        <TextView
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_height="30dp"
+            android:id="@+id/time"
+            android:gravity="center"
+            android:layout_width="wrap_content"/>
+    </FrameLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/ques_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top"
+        android:layout_above="@+id/work_bottombar">
+
+        <FrameLayout
+            android:id="@+id/frame_ques"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:padding="16dp" />
+
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/work_bottombar"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_work_sumbit"
+            android:layout_weight="1"
+            android:text="确认批改"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</RelativeLayout>

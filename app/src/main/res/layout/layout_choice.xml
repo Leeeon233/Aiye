@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup_choi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question"
+        android:gravity="left"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/optionA"
+            style="@style/style_option"
+            android:drawableLeft="@drawable/selector_option_a" />
+
+        <RadioButton
+            android:id="@+id/optionB"
+            style="@style/style_option"
+            android:drawableLeft="@drawable/selector_option_b" />
+
+        <RadioButton
+            android:id="@+id/optionC"
+            style="@style/style_option"
+            android:drawableLeft="@drawable/selector_option_c" />
+
+        <RadioButton
+            android:id="@+id/optionD"
+            style="@style/style_option"
+            android:drawableLeft="@drawable/selector_option_d" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_answer"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+</RelativeLayout>

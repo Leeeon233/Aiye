@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="64dp">
+    <ImageView
+        android:id="@+id/iv_stu_list"
+        android:layout_margin="8dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+    <RelativeLayout
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <TextView
+            android:text="赵亮"
+            android:id="@+id/tv_stu_list_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:gravity="center_vertical"
+            android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+            android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+            android:minHeight="?android:attr/listPreferredItemHeightSmall"
+            android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+            android:paddingRight="?android:attr/listPreferredItemPaddingRight" />
+        <TextView
+            android:text="未提交"
+            android:alpha="0.54"
+            android:textSize="14sp"
+            android:layout_marginRight="16dp"
+            android:gravity="center_vertical|right"
+            android:layout_alignParentRight="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tv_stu_list_finish" />
+    </RelativeLayout>
+
+
+</LinearLayout>

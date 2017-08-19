@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:alpha="0.87"
+    tools:context=".activities.CompleteInfoActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/icon" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="AIYE"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:id="@+id/btn_submit"
+        android:layout_width="176dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/shape_corner_green"
+        android:text="提交信息"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="84dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape_corner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp">
+            <FrameLayout
+                android:layout_width="36dp"
+                android:layout_height="64dp">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/imageView1"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:alpha="0.42"
+                    app:srcCompat="@mipmap/ic_face_black_48dp"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+            <LinearLayout
+                android:layout_marginStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="64dp">
+                <TextView
+                    android:alpha="0.54"
+                    android:textSize="16sp"
+                    android:text="请设置你的头像"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <FrameLayout
+                    android:layout_marginStart="4dp"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    tools:layout_editor_absoluteX="46dp"
+                    tools:layout_editor_absoluteY="189dp">
+
+                    <ImageButton
+                        android:id="@+id/imgbtn_pic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/whitecir_btn" />
+
+                    <ImageView
+                        android:id="@+id/imgview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/addpic" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:alpha="0.42"
+            android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/tv_message_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_marginStart="64dp"
+            android:textColor="#c64f46" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:alpha="0.42"
+                app:srcCompat="@mipmap/ic_person_black_48dp"
+                tools:ignore="ContentDescription" />
+
+            <EditText
+                android:id="@+id/name_text"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:alpha="0.54"
+                android:background="@null"
+                android:hint="请输入姓名"
+                android:maxLines="1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:alpha="0.42"
+            android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/tv_message_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_marginStart="64dp"
+            android:textColor="#c64f46" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:alpha="0.42"
+                app:srcCompat="@mipmap/ic_looks_one_black_48dp"
+                tools:ignore="ContentDescription" />
+
+            <EditText
+                android:id="@+id/id_text"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:alpha="0.54"
+                android:background="@null"
+                android:hint="请输入学号"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:alpha="0.42"
+            android:background="@color/divider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_marginStart="64dp"
+            android:textColor="#c64f46" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:alpha="0.42"
+                app:srcCompat="@mipmap/ic_school_black_48dp"
+                tools:ignore="ContentDescription" />
+
+            <EditText
+                android:id="@+id/txt_cls"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:alpha="0.54"
+                android:background="@null"
+                android:hint="请输入班级代码"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:alpha="0.42"
+            android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/tv_message_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_marginStart="64dp"
+            android:textColor="#c64f46" />
+    </android.support.design.widget.TextInputLayout>
+</android.support.constraint.ConstraintLayout>
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brown"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/imgbtn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back_light"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="@string/detail"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="24sp"
+            android:textColor="@color/test"
+            />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="128dp">
+        <ImageButton
+            android:id="@+id/imgbtn_pic"
+            android:layout_height="128dp"
+            android:layout_gravity="center"
+            android:background="@drawable/whitecir_btn"
+            android:layout_width="128dp" />
+
+        &lt;!&ndash;头像在这里上传&ndash;&gt;
+        <ImageView
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_gravity="center"
+            android:background="@drawable/addpic"
+            android:id="@+id/imgview" />
+    </FrameLayout>
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/people"/>
+            <EditText
+            android:id="@+id/name_text"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+                android:background="@drawable/white_bg"
+            android:hint="姓名"
+            android:textColorHint="@color/test_lighter"
+            android:paddingLeft="60dp"
+            android:textColor="@color/test"
+            android:textSize="20sp"
+                android:layout_height="50dp" />
+        </FrameLayout>
+        &lt;!&ndash;<FrameLayout
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/people"/>
+            &lt;!&ndash;<EditText
+                android:id="@+id/txt_sex"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:background="@drawable/white_bg"
+                android:hint="性别"
+                android:textColorHint="@color/test_lighter"
+                android:paddingLeft="60dp"
+                android:textColor="@color/test"
+                android:textSize="20sp"
+                android:layout_height="50dp" />&ndash;&gt;
+        </FrameLayout>&ndash;&gt;
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/card"/>
+            <EditText
+                android:id="@+id/id_text"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/white_bg"
+                android:hint="学号"
+                android:textColorHint="@color/test_lighter"
+                android:paddingLeft="60dp"
+                android:textColor="@color/test"
+                android:textSize="20sp"/>
+        </FrameLayout>
+        &lt;!&ndash;<FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/card"/>
+        <EditText
+            android:id="@+id/txt_birth"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/white_bg"
+            android:hint="出生日期"
+            android:textColorHint="@color/test_lighter"
+            android:paddingLeft="60dp"
+            android:textColor="@color/test"
+            android:textSize="20sp"
+            android:maxLength="10"
+            android:editable="false" />
+
+        </FrameLayout>&ndash;&gt;
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/card"/>
+            <EditText
+                android:id="@+id/txt_cls"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/white_bg"
+                android:hint="班级代码"
+                android:textColorHint="@color/test_lighter"
+                android:paddingLeft="60dp"
+                android:textColor="@color/test"
+                android:textSize="20sp"
+                android:inputType="date" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/whitecir_btn"
+        android:text="@string/submit"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+</LinearLayout>
+-->

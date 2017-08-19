@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="@color/primary"
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:layout_marginTop="23dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="开始答题"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/btn_workenter_back"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/back_light" />
+        </FrameLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+
+        android:layout_below="@+id/top"
+        android:id="@+id/enterWorkTitle"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:textSize="18sp"/>
+    <Button
+        android:id="@+id/btn_workenter_sumbit"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/selector_button_green"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:text="确认提交"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enterWorkTitle"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/btn_workenter_sumbit">
+        <LinearLayout
+            android:id="@+id/work_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:paddingLeft="8dp"
+                android:paddingBottom="8dp"
+                android:background="@color/background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="14sp"
+                    android:text="选择题" />
+                <GridLayout
+                    android:id="@+id/GridChoi"
+                    android:columnCount="6"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </GridLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="8dp"
+                android:paddingBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:id="@+id/linear3"
+                android:background="@color/background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="14sp"
+                    android:text="简答题"
+                    />
+
+                <GridLayout
+                    android:id="@+id/GridShort"
+                    android:columnCount="6"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear4"
+                android:paddingLeft="8dp"
+                android:paddingBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="14sp"
+                    android:text="纸质作业" />
+                <TextView
+                    android:id="@+id/tv_work_paper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/btn_paper_work"
+                    android:text="点击拍照"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <com.bm.library.PhotoView
+                    android:maxWidth="360dp"
+                    android:maxHeight="600dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/iv_paper_work"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear5"
+                android:paddingLeft="8dp"
+                android:paddingBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="14sp"
+                    android:text="语音作业" />
+                <TextView
+                    android:id="@+id/tv_work_recoder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/btn_listen"
+                        android:text="请先录音"
+                        android:layout_gravity="start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:layout_marginStart="30dp"
+                        android:id="@+id/btn_recoder"
+                        android:text="按住说话"
+                        android:layout_gravity="end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

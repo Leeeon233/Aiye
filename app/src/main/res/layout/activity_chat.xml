@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_message"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:background="@color/primary"
+        android:id="@+id/message_top"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:layout_marginTop="23dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:id="@+id/btn_chat_finish"
+                android:background="@drawable/back_light"
+                android:layout_width="28dp"
+                android:layout_height="28dp" />
+            <TextView
+                android:id="@+id/chat_title"
+                android:textColor="@color/icons"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/msg_list_view"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/divider">
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/input_text"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:hint="Type Something here!"
+            android:maxLines="10"
+            android:background="@drawable/edittext"/>
+        <Button
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:id="@+id/send"
+            android:background="@drawable/shape_corner_grey"
+            android:layout_width="64dp"
+            android:layout_height="36dp"
+            android:text="发送"/>
+    </LinearLayout>
+</LinearLayout>
